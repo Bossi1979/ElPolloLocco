@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+    
+    <script src="./js/models/drawableObject.class.js"></script>
+    <script src="./js/models/moveable_object.class.js"></script>
+    <script src="./js/models/keyboard.class.js"></script>
+    <script src="./js/models/background-objects.class.js"></script>
+    <script src="./js/models/character.class.js"></script>
+    <script src="./js/models/bottle.class.js"></script>
+    <script src="./js/models/statusbar_health.class.js"></script>
+    <script src="./js/models/statusbar_coin.class.js"></script>
+    <script src="./js/models/statusbar_bottle.class.js"></script>
+    <script src="./js/models/statusbar_endboss.class.js"></script>
+    <script src="./js/models/actual_level.class.js"></script>
+    <script src="./js/models/throwable_object.class.js"></script>
+    <script src="./js/models/lostGame.class.js"></script>
+    <script src="./js/models/winGame.class.js"></script>
+    <script src="./js/models/nextLevelGame.class.js"></script>
+    <script src="./js/models/coin.class.js"></script>
+    <script src="./js/models/chicken.class.js"></script>
+    <script src="./js/models/chicken_small.class.js"></script>
+    <script src="./js/models/cloud.class.js"></script>
+    <script src="./js/models/level.class.js"></script>
+    <script src="./js/models/endboss.class.js"></script>
+    <script src="./js/levels/level.js"></script>
+    <script src="./js/levels/level1.js"></script>
+    <script src="./js/levels/level2.js"></script>
+    <script src="./js/levels/level3.js"></script>
+    <script src="./js/models/world.class.js"></script>
+    <script src="./js/game_mobile.js"></script>
+    <script src="./js/game.js"></script>
+    
+    <link rel="shortcut icon" href="./img/7_statusbars/facicon.png" type="image/x-icon">
+
+    <title>El Pollo Locco</title>
+</head>
+
+<body>
+    <div id="fullscreen">
+        <h1 id="header">El Pollo Loco</h1>
+        <div class="gameContainer" id="gameContainer">
+            <div class="upperMobilBtn d-none" id="upperBtn">
+                    <img src="./img/mobil_buttons/open-fullscreen.png" id="btnFull" title="fullscreen" onclick="fullscreen()">
+                    <img src="./img/mobil_buttons/close-fullscreen.png" class='d-none' id="btnFullEnd" title="cancel fullscreen" onclick="exitShownFullscreen()">
+                    <img src="./img\mobil_buttons\speaker.png" title="sounds off" onclick="soundsOff()" id="btnSoundsOff">
+                    <img src="./img\mobil_buttons\speaker-muted.png" title="sounds on" onclick="soundsOn()" class="d-none" id="btnSoundsOn">
+                    <img src="./img\mobil_buttons\pause.png" title="pause" id="btnPause" onclick="pauseGame()">
+                    <img src="./img\mobil_buttons/resume.png" title="continue" id="btnResume" onclick="resumeGame()" class="d-none">
+                    <img src="./img\mobil_buttons\x.png" title="exit Game" id="btnExit" onclick="exitGame()">
+            </div>
+            <canvas id="canvas" width="720" height="480" class="d-none">
+                
+            </canvas>
+            <div class="lowerMobilBtn d-none" id="lwrBtn">
+                <div>
+                    <img src="./img/mobil_buttons/arrow-left.png" id="btnLeft">
+                    <img src="./img/mobil_buttons/arrow-right.png" id="btnRight">
+                </div>
+                <div>
+                    <img src="./img/mobil_buttons/arrow-up.png" id="btnJump">
+                    <img src="./img/mobil_buttons/bottle.png" id="btnBottle">
+                </div>
+            </div>
+            <div id="startScreen">
+                <img src="./img/play.png" onclick="startGame()">
+
+                <div class="keyDescription" id="keyDescription">
+                    <div>
+                        <span>[Space] = jump</span>
+                    </div>
+                    <div>
+                        <span>[<] = move right</span>
+                    </div>
+                    <div>
+                        <span>[>] = move left</span>
+                    </div>
+                    <div>
+                        <span>[d] = throw a bottle</span>
+                    </div>
+                </div>
+            </div>
+            <div class="turnYourDevice d-none" id="turnYourDevive">
+                <img src="./img/turn-device.png">
+                <span>Please turn your Device</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
